@@ -36,6 +36,8 @@
             
             <div class="form-group row justify-content-end">
                 <div class="col-sm-10">
+                    <input type="hidden" class="form-control" id="gambar" name="gambar"
+                    value="<?= $image; ?>">
                     <button type="submit" class="btn btn-primary">Ubah</button>
                     <button class="btn btn-dark" onclick="window.history.go(-1)"> Kembali</button>
                 </div>

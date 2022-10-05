@@ -145,14 +145,13 @@ class Member extends CI_Controller
                 $config['upload_path'] = './assets/img/profile/';
                 $config['allowed_types'] = 'gif|jpg|png';
                 $config['max_size'] = '3000';
-                $config['max_width'] = '1024';
-                $config['max_height'] = '1000';
+
                 $config['file_name'] = 'pro' . time();
 
                 $this->load->library('upload', $config);
 
                 if ($this->upload->do_upload('image')) {
-                    $gambar_lama = $data['user']['image'];
+                    $gambar_lama = $data['image'];
                     if ($gambar_lama != 'default.jpg') {
                         unlink(FCPATH . 'assets/img/profile/' . $gambar_lama);
                     }
