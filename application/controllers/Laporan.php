@@ -46,7 +46,13 @@ class Laporan extends CI_Controller
         //Convert to PDF
         $dompdf->load_html($html);
         $dompdf->render();
-        $dompdf->stream("laporan_data_buku.pdf", array('Attachment' => 0));
+        $dompdf->stream("laporan_data_buku.pdf",  array('Attachment' => 0));
         // nama file pdf yang di hasilkan
+    }
+
+    public function export_excel()
+    {
+        $data = array('title' => 'Laporan buku', 'buku' => $this->ModelBuku->GetBuku()->Result_array());
+        $this->load->view('buku/export_excel_buku', $data);
     }
 }

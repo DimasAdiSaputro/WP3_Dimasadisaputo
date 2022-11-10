@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                             </div> <?php } ?>
-                        <!-- end looping -->
+                        <!-- end looping --> 
                     </div>
                 </div>
             </div>

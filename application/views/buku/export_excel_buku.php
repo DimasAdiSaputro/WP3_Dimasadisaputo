@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <style type="text/css">
-  .table-data{
-    width: 100%;
-    border-collapse: collapse;
-   }
- 
-  .table-data tr th,
-  .table-data tr td{
-    border:1px solid black;
-    font-size: 11pt;
-    font-family:Verdana;
-    padding: 10px 10px 10px 10px;
-   }
-   h3{
-    font-family:Verdana;
-  }
- </style>
+<?php
+header("Content-Type: application/vnd-ms-excel; charset=utf-8");
+header("Content-type: application/x-msexcel; charset=utf-8");
+header("Content-Disposition: attachment; filename=$title.xls");
+header("Expires: 0");
+header("Cache-control: must-revalidate, post-check=0, pre-check=0");
+header("Cache-control: private", false);
+?>
 
  <h3><center>Laporan Data Buku Perputakaan Online</center></h3>
  <br/>
